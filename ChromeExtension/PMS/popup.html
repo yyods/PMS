@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CU-ePMS Data Extractor</title>
+    <style>
+      /* General reset and font setup */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        width: 400px;
+        height: 400px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      /* Header styling */
+      h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      /* Button styling */
+      .btn-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      button {
+        flex: 1;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      button:disabled {
+        background-color: #c0c0c0;
+        cursor: not-allowed;
+      }
+
+      /* Output container styling */
+      #output {
+        flex: 1;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+
+      /* Table styling */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+        margin-top: 10px;
+        table-layout: auto; /* Automatically adjusts column widths */
+      }
+
+      th,
+      td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        color: #333;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      /* Adjust name column width to fit content */
+      th:first-child,
+      td:first-child {
+        white-space: nowrap; /* Prevent text wrapping */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CU-ePMS Data Extractor</h1>
+    <div class="btn-container">
+      <button id="start-collection">Start Collection</button>
+      <button id="collect-data">Collect Data</button>
+      <button id="export-csv">Export CSV</button>
+    </div>
+    <div id="output">
+      <p style="text-align: center; color: #666">No data collected yet.</p>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

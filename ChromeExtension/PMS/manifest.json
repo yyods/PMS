@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "CU-ePMS Data Extractor",
+  "version": "1.0",
+  "description": "Extract data from CU-ePMS workload user boxes.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["<all_urls>"]
+}
