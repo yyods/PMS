@@ -1,6 +1,6 @@
 # PMS Project
 
-This repository contains the PMS (Project Management System) project, which is structured into two main components:
+This repository contains the PMS (Performance Management System) project, which is structured into two main components:
 
 1. **ChromeExtension**: A browser extension for collecting data and exporting it as a `.csv` file.
 2. **Processing**: A Python script for processing the `.csv` file to identify the status of each record.
